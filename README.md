@@ -23,3 +23,10 @@ diff <(sort file1) <(sort file2)
 ## Walk
 
 Walk directory tree outputting paths to stdout.
+
+## nanoid
+
+Generate nanoid
+
+```sh
+nanoid -c 16 # 0WDx0Y8QReDJpFzo
