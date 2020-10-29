@@ -6,6 +6,7 @@ import (
 	"os"
 
 	"github.com/yuin/goldmark"
+	"github.com/yuin/goldmark/extension"
 )
 
 func main() {
@@ -14,7 +15,11 @@ func main() {
 		fmt.Fprint(os.Stderr, err)
 		os.Exit(1)
 	}
-	err = goldmark.Convert(b, os.Stdout)
+
+	md := goldmark.New(
+		goldmark.WithExtensions(extension.GFM),
+	)
+	err = md.Convert(b, os.Stdout)
 	if err != nil {
 		fmt.Fprint(os.Stderr, err)
 		os.Exit(2)
