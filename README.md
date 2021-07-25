@@ -45,5 +45,5 @@ text
 <b/>
 <p/>
 
-tg !DOCTYPE -a html | tg html $(tg head | tg body $(tg p hello world))
+$ tg !DOCTYPE -a html | tg html $(tg head | tg body $(tg p hello world))
 ```
