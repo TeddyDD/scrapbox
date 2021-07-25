@@ -30,3 +30,18 @@ Generate nanoid
 
 ```sh
 nanoid -c 16 # 0WDx0Y8QReDJpFzo
+```
+
+## tg
+
+Like [jo](https://github.com/jpmens/jo) but for HTML
+
+```sh
+$ tg p This is paragraph of $(tg -a class=foo b text)
+<p>
+This is paragraph of
+<b class="foo" >
+text
+<b/>
+<p/>
+```
