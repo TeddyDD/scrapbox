@@ -44,4 +44,6 @@ This is paragraph of
 text
 <b/>
 <p/>
+
+tg !DOCTYPE -a html | tg html $(tg head | tg body $(tg p hello world))
 ```

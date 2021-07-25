@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"io"
+	"os"
 	"strings"
 
 	"github.com/spf13/pflag"
@@ -14,6 +16,11 @@ func main() {
 
 	tag := pflag.Arg(0)
 	b := &strings.Builder{}
+
+	fi, _ := os.Stdin.Stat()
+	if (fi.Mode() & os.ModeCharDevice) == 0 {
+		io.Copy(b, os.Stdin)
+	}
 
 	b.WriteRune('<')
 	b.WriteString(tag)
