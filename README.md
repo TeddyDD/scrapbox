@@ -46,4 +46,23 @@ text
 <p/>
 
 $ tg !DOCTYPE -a html | tg html $(tg head | tg body $(tg p hello world))
+# ...
+
+# Basic HTML5 template
+$ tg p hello world | tg -b -t example
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      example
+    </title>
+  </head>
+  <body>
+    <p>
+      hello world
+    </p>
+  </body>
+</html>
 ```
