@@ -7,5 +7,5 @@ require (
 	github.com/spf13/pflag v1.0.5
 	github.com/yosssi/gohtml v0.0.0-20201013000340-ee4748c638f4
 	github.com/yuin/goldmark v1.5.4
-	golang.org/x/crypto v0.31.0
+	golang.org/x/crypto v0.35.0
 )
